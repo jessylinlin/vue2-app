@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        hello
+    </div>
+    <script>
+        let data = {
+            msg: 'hello',
+            count: 10
+        }
+
+        //实例
+        let vm = new Proxy(data, {
+            //执行代理行为的函数
+            get(target, key) {
+                console.log('get:', key, target[key])
+                return target[key]
+            },
+            set(target, key, newValue) {
+                console.log('set:', key, newValue)
+
+                if (newValue === target[key]) {
+                    return
+                }
+
+                target[key] = newValue
+                //更新dom
+                document.querySelector('#app').textContent = target[key]
+            }
+        })
+
+        //test
+        vm.msg = 'hello sb'
+        console.log(vm.msg)
+    </script>
+</body>
+
+</html>
