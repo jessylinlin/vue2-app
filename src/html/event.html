@@ -14,6 +14,8 @@
 
         let vm = new Vue()
 
+        console.log(vm)
+
         //{'click': [fn1, fn2], 'change': [fn]}
 
         //注册
@@ -26,8 +28,7 @@
 
         //触发事件
         vm.$emit('dataChange')
-        //通过对象名称，在对象里找对应属性，依次执行数组中函数
-
+            //通过对象名称，在对象里找对应属性，依次执行数组中函数
     </script>
 </body>
 
