@@ -7,6 +7,8 @@
     </div>
     <!-- 创建路由组件的占位 -->
     <router-view />
+    <component-a></component-a>
+    <component-b></component-b>
   </div>
 </template>
 

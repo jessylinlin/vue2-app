@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       privateState: {},
-      sharedState: store.store,
+      sharedState: store.state,
     };
   },
   methods: {
