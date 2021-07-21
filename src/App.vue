@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
+    <div id="nav">
       <router-link to="/">Index</router-link> |
       <router-link to="/login">login</router-link>|
       <router-link to="/video">video</router-link>
-    </div> -->
+    </div>  
     <!-- 创建路由组件的占位 -->
-    <!-- <router-view />
+    <router-view />
     <component-a></component-a>
-    <component-b></component-b> -->
+    <component-b></component-b>
     <h1>Vuex</h1>
     <!-- count: {{$store.state.count}}
     msg: {{$store.state.msg}} -->

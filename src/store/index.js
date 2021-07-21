@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+//自定义vuex插件
+// import Vuex from '../myVuex/index'
 import products from './modules/product'
 import cart from './modules/cart'
 
@@ -7,7 +9,7 @@ import cart from './modules/cart'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-    strict: process.env.NODE_ENV !== 'production', //严格模式,生产环境不建议打开
+    // strict: process.env.NODE_ENV !== 'production', //严格模式,生产环境不建议打开
     state: {
         count: 0,
         msg: 'vuex'
